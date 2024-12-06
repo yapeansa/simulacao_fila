@@ -1,5 +1,5 @@
 TARGET = main
-SOURCE = main.c
+SOURCE = main.c fila.c
 CC = gcc
 RM = rm -rf
 
