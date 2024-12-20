@@ -23,6 +23,6 @@ int main()
         printf("===> Tempo %d\n", tempo++);
         imprime(f1);
     };
-    
+
     return 0;
 }
