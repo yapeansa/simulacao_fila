@@ -4,6 +4,7 @@
 
 int cliente = 1;
 int contaTempoAtendimento = 1; // variável para a contagem do tempo de atendimento.
+int contaFilaCheia = 0;
 
 int Random(int low, int high)
 {
@@ -31,6 +32,7 @@ int filaCheia(fila *f)
 {
     if (f->fim == TAM)
         return 1;
+
     return 0;
 }
 
@@ -40,6 +42,7 @@ int poe(fila *f, int v)
     {
         // Escreve no arquivo informando uma eventual ocorrência de fila cheia para um tempo t.
         fprintf(arq, "Fila cheia \n");
+        contaFilaCheia++;
         printf("Fila cheia!\n");
         return 0;
     }
@@ -132,7 +135,8 @@ void imprime(fila *f)
     printf("\n");
 }
 
-void liberaFila(fila **f)
+// Função para liberar memória alocada para fila
+void liberaFila(fila *f)
 {
-    free(*f);
+    free(f);
 }

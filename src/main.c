@@ -5,6 +5,7 @@
 #include "fila.h"
 
 FILE *arq;
+extern int contaFilaCheia;
 
 int main()
 {
@@ -23,7 +24,7 @@ int main()
     {
         printf("Parâmetro para o tempo de chegada: ");
         scanf("%d", &sorteiaTempoChegada);
-    } while (sorteiaTempoChegada >= 0 && sorteiaTempoChegada <= 100);
+    } while (sorteiaTempoChegada < 0 || sorteiaTempoChegada > 100);
 
     // Parâmetro para sortear o tempo de atendimento de clientes
     do
@@ -51,7 +52,8 @@ int main()
     };
 
     // Escreve no arquivo imprimindo no final o número de atendimentos
-    fprintf(arq, "Número de atendimentos: %d", g1->atendimentos);
+    fprintf(arq, "Número de atendimentos: %d\n", g1->atendimentos);
+    fprintf(arq, "Ocorrências de fila cheia: %d\n", contaFilaCheia);
 
     // Fecha o arquivo
     fclose(arq);

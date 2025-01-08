@@ -15,16 +15,17 @@ typedef struct guiche
 } guiche;
 
 extern FILE *arq;
-extern int tempoDeEspera;
 
 int Random(int low, int high);
 void initGuiche(guiche **g);
 void initFila(fila **f);
+int filaCheia(fila *f);
 int poe(fila *f, int v);
 void desloca(fila *f);
 int pega(fila *f);
 void trataGuiche(guiche *g, fila *f, int t);
 void trataCliente(fila *f, int t);
 void imprime(fila *f);
+void liberaFila(fila *f);
 
 #endif
