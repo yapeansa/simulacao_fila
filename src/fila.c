@@ -3,6 +3,7 @@
 #include "fila.h"
 
 int cliente = 1;
+int contaTempoAtendimento = 1; // variável para a contagem do tempo de atendimento.
 
 int Random(int low, int high)
 {
@@ -26,15 +27,26 @@ void initFila(fila **f)
     (*f)->fim = 0;
 }
 
-int poe(fila *f, int v)
+int filaCheia(fila *f)
 {
     if (f->fim == TAM)
+        return 1;
+    return 0;
+}
+
+int poe(fila *f, int v)
+{
+    if (filaCheia(f))
     {
+        // Escreve no arquivo informando uma eventual ocorrência de fila cheia para um tempo t.
+        fprintf(arq, "Fila cheia \n");
         printf("Fila cheia!\n");
         return 0;
     }
     else
     {
+        // Escreve no arquivo informando que chegou um cliente em um tempo t.
+        fprintf(arq, "Chegou cliente %d\n", cliente);
         printf("Chegou cliente %d\n", cliente);
         f->vet[f->fim] = v;
         f->fim++;
@@ -45,8 +57,7 @@ int poe(fila *f, int v)
 // reaproveitamento por deslocamento
 void desloca(fila *f)
 {
-    int i;
-    for (i = 1; i < f->fim; i++)
+    for (int i = 1; i < f->fim; i++)
     {
         f->vet[i - 1] = f->vet[i];
     }
@@ -74,22 +85,41 @@ void trataGuiche(guiche *g, fila *f, int t)
 {
     if (f->fim > 0)
     {
-        if (g->ocupado < t)
+        if (g->ocupado <= contaTempoAtendimento)
         {
             int ret = pega(f);
+            /* A condição if (f->fim > 0) já garante que a fila não está vazia.
+            Lembrando que pega(f) retorna -1 apenas no caso em que a fila está vazia.
             if (ret != -1)
             {
-                printf("Proximo, senha %d \n", ret);
-                g->ocupado = Random(2, 15) + t;
-                g->atendimentos++;
-            }
+            Escreve no arquivo informando que um cliente foi chamado para atendimento. */
+            fprintf(arq, "Próximo, senha %d \n", ret);
+            printf("Proximo, senha %d \n", ret);
+            g->ocupado = Random(2, t + 5); // Sorteia o tempo de atendimento para um determinado cliente.
+            g->atendimentos++;
+            // Escreve no arquivo a informação do tempo de atendimento sorteado para um determinado cliente.
+            fprintf(arq, "Tempo de atendimento: %d \n", g->ocupado);
+            printf("Tempo de atendimento: %d \n", g->ocupado);
+            // }
+            contaTempoAtendimento = 0; // Zera a contagem do tempo de atendimento.
         }
+        else
+            contaTempoAtendimento++; // Contagem do tempo de atendimento.
+    }
+    else
+    {
+        /* No início, quando a fila tem apenas um cliente, o mesmo é atendido imediatamente
+        Como consequência a fila fica vazia e este trecho de código garante que a contagem do tempo
+        atendimento continue e que, quando o próximo cliente chegar na fila vazia,
+        ele também seja atendido imediatamente. */
+        if (g->ocupado != 0 && contaTempoAtendimento < g->ocupado)
+            contaTempoAtendimento++;
     }
 }
 
-void trataCliente(fila *f)
+void trataCliente(fila *f, int t)
 {
-    if (Random(0, 100) <= 25)
+    if (Random(0, 100) <= t)
         if (poe(f, cliente))
             cliente++;
 }
@@ -97,8 +127,12 @@ void trataCliente(fila *f)
 void imprime(fila *f)
 {
     printf("Fila: ");
-    int i;
-    for (i = 0; i < f->fim; i++)
+    for (int i = 0; i < f->fim; i++)
         printf(" %d", f->vet[i]);
     printf("\n");
+}
+
+void liberaFila(fila **f)
+{
+    free(*f);
 }
