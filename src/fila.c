@@ -140,3 +140,9 @@ void liberaFila(fila *f)
 {
     free(f);
 }
+
+// Função para liberar memória alocada para guichê
+void liberaGuiche(guiche *g)
+{
+    free(g);
+}
