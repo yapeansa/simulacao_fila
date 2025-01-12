@@ -5,29 +5,29 @@
 #include "fila.h"
 
 FILE *arq;
-extern int contaFilaCheia;
+extern int contaFilaCheia; // variável utilizada no arquivo fila.c para contagem de ocorrências de fila cheia
 
 int main()
 {
     srand(time(NULL));
     int tempo, sorteiaTempoChegada, sorteiaTempoAtendimento;
-    char nomeiaArquivo[12];
+    char nomeiaArquivo[10];
     fila *f1;
     guiche *g1;
 
     // Parâmetro para sortear o tempo de chegada de clientes.
     do
     {
-        printf("Parâmetro para o tempo de chegada: ");
+        printf("Parâmetro para o tempo de chegada (valor de 1 a 10): ");
         scanf("%d", &sorteiaTempoChegada);
-    } while (sorteiaTempoChegada < 0 || sorteiaTempoChegada > 100);
+    } while (sorteiaTempoChegada < 1 || sorteiaTempoChegada > 10);
 
     // Parâmetro para sortear o tempo de atendimento de clientes.
     do
     {
-        printf("Parâmetro para o tempo de atendimento (valor de 5 a 10): ");
+        printf("Parâmetro para o tempo de atendimento (valor de 0 a 10): ");
         scanf("%d", &sorteiaTempoAtendimento);
-    } while (sorteiaTempoAtendimento < 5 || sorteiaTempoAtendimento > 10);
+    } while (sorteiaTempoAtendimento < 0 || sorteiaTempoAtendimento > 10);
 
     int i = 1;
     do
@@ -38,7 +38,7 @@ int main()
         initFila(&f1);
         initGuiche(&g1);
 
-        // loop
+        // loop (faz a fila andar)
         while (tempo <= 100)
         {
             // trata chegada de cliente
@@ -53,16 +53,18 @@ int main()
             printf("\n");
         };
 
-        // Escreve no arquivo imprimindo no final o número de atendimentos.
+        // Escreve no final do arquivo imprimindo o número de atendimentos.
         fprintf(arq, "Número de atendimentos: %d\n", g1->atendimentos);
-        // Escreve no arquivo imprimindo no final o número de ocorrências de fila cheia.
+        // Escreve no final do arquivo imprimindo o número de ocorrências de fila cheia.
         fprintf(arq, "Ocorrências de fila cheia: %d\n", contaFilaCheia);
+
+        fclose(arq);      // Fecha o arquivo.
+        liberaFila(f1);   // libera fila.
+        liberaGuiche(g1); // libera guichê;
+
         i++;
 
-    } while (contaFilaCheia != 0 && i <= 5);
+    } while (contaFilaCheia != 0 && i <= 9);
 
-    fclose(arq);      // Fecha o arquivo.
-    liberaFila(f1);   // libera fila.
-    liberaGuiche(g1); // libera guichê;
     return 0;
 }

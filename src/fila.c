@@ -122,7 +122,7 @@ void trataGuiche(guiche *g, fila *f, int t)
 
 void trataCliente(fila *f, int t)
 {
-    if (Random(0, 100) <= t)
+    if (Random(0, 100) <= (10 * t))
         if (poe(f, cliente))
             cliente++;
 }
