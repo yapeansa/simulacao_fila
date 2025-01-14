@@ -4,7 +4,6 @@
 
 int cliente = 1;
 int contaTempoAtendimento = 1; // variável para a contagem do tempo de atendimento.
-int contaFilaCheia = 0;
 
 int Random(int low, int high)
 {

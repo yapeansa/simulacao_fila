@@ -1,0 +1,255 @@
+Parâmetros. Tempo de chagada: 2; Tempo de atendimento: 5
+
+===> Tempo 0
+
+===> Tempo 1
+
+===> Tempo 2
+
+Chegou cliente 22
+Próximo, senha 22 
+Tempo de atendimento: 4 
+===> Tempo 3
+
+Chegou cliente 23
+===> Tempo 4
+
+===> Tempo 5
+
+===> Tempo 6
+
+===> Tempo 7
+
+Próximo, senha 23 
+Tempo de atendimento: 8 
+===> Tempo 8
+
+===> Tempo 9
+
+===> Tempo 10
+
+===> Tempo 11
+
+===> Tempo 12
+
+===> Tempo 13
+
+===> Tempo 14
+
+===> Tempo 15
+
+===> Tempo 16
+
+===> Tempo 17
+
+===> Tempo 18
+
+===> Tempo 19
+
+Chegou cliente 24
+Próximo, senha 24 
+Tempo de atendimento: 10 
+===> Tempo 20
+
+===> Tempo 21
+
+===> Tempo 22
+
+===> Tempo 23
+
+===> Tempo 24
+
+===> Tempo 25
+
+===> Tempo 26
+
+Chegou cliente 25
+===> Tempo 27
+
+Chegou cliente 26
+===> Tempo 28
+
+===> Tempo 29
+
+===> Tempo 30
+
+Próximo, senha 25 
+Tempo de atendimento: 7 
+===> Tempo 31
+
+===> Tempo 32
+
+Chegou cliente 27
+===> Tempo 33
+
+===> Tempo 34
+
+Chegou cliente 28
+===> Tempo 35
+
+Chegou cliente 29
+===> Tempo 36
+
+Chegou cliente 30
+===> Tempo 37
+
+===> Tempo 38
+
+Próximo, senha 26 
+Tempo de atendimento: 9 
+===> Tempo 39
+
+===> Tempo 40
+
+===> Tempo 41
+
+Chegou cliente 31
+===> Tempo 42
+
+Chegou cliente 32
+===> Tempo 43
+
+Chegou cliente 33
+===> Tempo 44
+
+===> Tempo 45
+
+===> Tempo 46
+
+===> Tempo 47
+
+===> Tempo 48
+
+Próximo, senha 27 
+Tempo de atendimento: 4 
+===> Tempo 49
+
+===> Tempo 50
+
+===> Tempo 51
+
+===> Tempo 52
+
+===> Tempo 53
+
+Próximo, senha 28 
+Tempo de atendimento: 5 
+===> Tempo 54
+
+Chegou cliente 34
+===> Tempo 55
+
+Chegou cliente 35
+===> Tempo 56
+
+Chegou cliente 36
+===> Tempo 57
+
+===> Tempo 58
+
+===> Tempo 59
+
+Próximo, senha 29 
+Tempo de atendimento: 6 
+===> Tempo 60
+
+Chegou cliente 37
+===> Tempo 61
+
+===> Tempo 62
+
+===> Tempo 63
+
+===> Tempo 64
+
+===> Tempo 65
+
+Chegou cliente 38
+===> Tempo 66
+
+Chegou cliente 39
+Próximo, senha 30 
+Tempo de atendimento: 10 
+===> Tempo 67
+
+===> Tempo 68
+
+===> Tempo 69
+
+Chegou cliente 40
+===> Tempo 70
+
+===> Tempo 71
+
+===> Tempo 72
+
+===> Tempo 73
+
+===> Tempo 74
+
+===> Tempo 75
+
+===> Tempo 76
+
+===> Tempo 77
+
+Próximo, senha 31 
+Tempo de atendimento: 9 
+===> Tempo 78
+
+===> Tempo 79
+
+===> Tempo 80
+
+===> Tempo 81
+
+===> Tempo 82
+
+Chegou cliente 41
+===> Tempo 83
+
+===> Tempo 84
+
+===> Tempo 85
+
+===> Tempo 86
+
+Fila cheia 
+===> Tempo 87
+
+Próximo, senha 32 
+Tempo de atendimento: 2 
+===> Tempo 88
+
+===> Tempo 89
+
+===> Tempo 90
+
+Próximo, senha 33 
+Tempo de atendimento: 7 
+===> Tempo 91
+
+===> Tempo 92
+
+===> Tempo 93
+
+===> Tempo 94
+
+Chegou cliente 42
+===> Tempo 95
+
+===> Tempo 96
+
+===> Tempo 97
+
+===> Tempo 98
+
+Próximo, senha 34 
+Tempo de atendimento: 7 
+===> Tempo 99
+
+Chegou cliente 43
+===> Tempo 100
+
+Número de atendimentos: 13
+Ocorrências de fila cheia: 1

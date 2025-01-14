@@ -14,7 +14,8 @@ typedef struct guiche
     int atendimentos;
 } guiche;
 
-extern FILE *arq;
+extern FILE *arq;          // Para que seja possível utilizar a variável arq em fila.c
+extern int contaFilaCheia; // Variável utilizada em main.c e fila.c para a contagem de ocorrência de fila cheia
 
 int Random(int low, int high);
 void initGuiche(guiche **g);

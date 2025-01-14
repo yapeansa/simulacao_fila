@@ -5,7 +5,7 @@
 #include "fila.h"
 
 FILE *arq;
-extern int contaFilaCheia; // variável utilizada no arquivo fila.c para contagem de ocorrências de fila cheia
+int contaFilaCheia;
 
 int main()
 {
@@ -29,14 +29,21 @@ int main()
         scanf("%d", &sorteiaTempoAtendimento);
     } while (sorteiaTempoAtendimento < 0 || sorteiaTempoAtendimento > 10);
 
+    // faz o loop até que se tenh zero ocorrência de fila cheia em um guichê
     int i = 1;
     do
     {
-        sprintf(nomeiaArquivo, "fila%d.txt", i);
-        arq = fopen(nomeiaArquivo, "a"); // Abre o arquivo para escrever os dados.
+        sprintf(nomeiaArquivo, "fila%d.txt", i); // Formata o nome do arquivo de arcordo com o loop.
+        arq = fopen(nomeiaArquivo, "a");         // Abre o arquivo para escrever os dados.
+
+        // Escreve os parâmetros determinados pelo usuário
+        fprintf(arq, "Parâmetros. Tempo de chagada: %d; Tempo de atendimento: %d\n\n", sorteiaTempoChegada, sorteiaTempoAtendimento);
+
+        // Estabelece condições iniciais a cada início do loop.
         tempo = 0;
         initFila(&f1);
         initGuiche(&g1);
+        contaFilaCheia = 0;
 
         // loop (faz a fila andar)
         while (tempo <= 100)
