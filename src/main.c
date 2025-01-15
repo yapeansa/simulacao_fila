@@ -34,10 +34,10 @@ int main()
     do
     {
         sprintf(nomeiaArquivo, "fila%d.txt", i); // Formata o nome do arquivo de arcordo com o loop.
-        arq = fopen(nomeiaArquivo, "a");         // Abre o arquivo para escrever os dados.
+        arq = fopen(nomeiaArquivo, "w");         // Abre o arquivo para escrever os dados.
 
         // Escreve os parâmetros determinados pelo usuário
-        fprintf(arq, "Parâmetros. Tempo de chagada: %d; Tempo de atendimento: %d\n\n", sorteiaTempoChegada, sorteiaTempoAtendimento);
+        fprintf(arq, "Parâmetros para sorteio. Tempo de chegada: %d; Tempo de atendimento: %d\n\n", sorteiaTempoChegada, sorteiaTempoAtendimento);
 
         // Estabelece condições iniciais a cada início do loop.
         tempo = 0;
