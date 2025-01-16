@@ -12,8 +12,12 @@ Logo em seguida, no interior do loop anterior, inicia-se um novo loop. Esse novo
 
 ## Função `initFila()`
 
-...
+A função initFila() recebe por parâmetro a fila (por referência). Esta função é responsável por alocar memória dinâmicamente para a fila e inicializá-la, isto é, inicializa o campo `fim` com o valor 0.
 
 ## Função `initGuiche()`
+
+A função initGuiche() recebe por parâmetro o guichê (também por referência). Então a memória é alocada dinamicamente para o guichê e os campos atendimentos e ocupado são ambos inicializados com o valor 0.
+
+## Função `trataCliente()`
 
 ...
