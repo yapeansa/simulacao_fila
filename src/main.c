@@ -71,7 +71,7 @@ int main()
 
         i++;
 
-    } while (contaFilaCheia != 0 && i <= 9);
+    } while (contaFilaCheia != 0 /* && i <= 9*/);
 
     return 0;
 }
