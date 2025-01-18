@@ -27,7 +27,7 @@ int pega(fila *f);
 void trataGuiche(guiche *g, fila *f, int t);
 void trataCliente(fila *f, int t);
 void imprime(fila *f);
-void liberaFila(fila *f);
-void liberaGuiche(guiche *g);
+void liberaFila(fila **f);
+void liberaGuiche(guiche **g);
 
 #endif

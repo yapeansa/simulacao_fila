@@ -39,7 +39,7 @@ int main()
         // Escreve os parâmetros determinados pelo usuário
         fprintf(arq, "Parâmetros para sorteio. Tempo de chegada: %d; Tempo de atendimento: %d\n\n", sorteiaTempoChegada, sorteiaTempoAtendimento);
 
-        // Estabelece condições iniciais a cada início do loop.
+        // Estabelece condições iniciais para cada iteração do loop.
         tempo = 0;
         initFila(&f1);
         initGuiche(&g1);
@@ -66,8 +66,8 @@ int main()
         fprintf(arq, "Ocorrências de fila cheia: %d\n", contaFilaCheia);
 
         fclose(arq);      // Fecha o arquivo.
-        liberaFila(f1);   // libera fila.
-        liberaGuiche(g1); // libera guichê;
+        liberaFila(&f1);   // libera fila.
+        liberaGuiche(&g1); // libera guichê;
 
         i++;
 

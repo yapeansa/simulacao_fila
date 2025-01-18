@@ -135,13 +135,13 @@ void imprime(fila *f)
 }
 
 // Função para liberar memória alocada para fila
-void liberaFila(fila *f)
+void liberaFila(fila **f)
 {
-    free(f);
+    free(*f);
 }
 
 // Função para liberar memória alocada para guichê
-void liberaGuiche(guiche *g)
+void liberaGuiche(guiche **g)
 {
-    free(g);
+    free(*g);
 }

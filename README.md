@@ -1,6 +1,6 @@
 # Simulação de Filas
 
-Simulação de Filas: Modificar o código pegando os parâmetros do problema ( probabilidades). Gerar dados em arquivo (para importação para planilha e fazer gráficos) sobre tempo de atendimento, ocorrências de fila cheia e número de clientes atendidos.
+Simulação de Filas: Modificar o código pegando os parâmetros do problema (probabilidades). Gerar dados em arquivo (para importação para planilha e fazer gráficos) sobre tempo de atendimento, ocorrências de fila cheia e número de clientes atendidos. A seguir está um resumo das implementações feitas no código base do trabalho.
 
 ## Função Principal `main()`
 
@@ -16,8 +16,20 @@ A função initFila() recebe por parâmetro a fila (por referência). Esta funç
 
 ## Função `initGuiche()`
 
-A função initGuiche() recebe por parâmetro o guichê (também por referência). Então a memória é alocada dinamicamente para o guichê e os campos atendimentos e ocupado são ambos inicializados com o valor 0.
+A função initGuiche() recebe por parâmetro o guichê (também por referência). Então a memória é alocada dinamicamente para o guichê e os campos `atendimentos` e `ocupado` são ambos inicializados com o valor 0.
 
 ## Função `trataCliente()`
 
 ...
+
+## Função `trataGuiche()`
+
+...
+
+## `liberaFila()`
+
+Precisamos liberar a memória alocada dinamicamente para cada fila na execução do primeiro loop da função principal. Desta forma, a função liberaFila() recebe como parâmetro a fila para que a memória seja desalocada.
+
+## `liberaGuiche()`
+
+Do mesmo modo precisamos deslocar a memória alocada para o guichê. A função em questão recebe como parâmetro o guichê para a memória seja liberada.
