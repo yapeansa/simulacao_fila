@@ -20,7 +20,7 @@ A função initGuiche() recebe por parâmetro o guichê (também por referência
 
 ## Função `trataCliente()`
 
-...
+A função trataCliente() é responsável por sortear a chegada de clientes...
 
 ## Função `trataGuiche()`
 

@@ -97,7 +97,7 @@ void trataGuiche(guiche *g, fila *f, int t)
             Escreve no arquivo informando que um cliente foi chamado para atendimento. */
             fprintf(arq, "Próximo, senha %d \n", ret);
             printf("Proximo, senha %d \n", ret);
-            g->ocupado = Random(2, t + 5); // Sorteia o tempo de atendimento para um determinado cliente.
+            g->ocupado = Random(2, t); // Sorteia o tempo de atendimento para um determinado cliente.
             g->atendimentos++;
             // Escreve no arquivo a informação do tempo de atendimento sorteado para um determinado cliente.
             fprintf(arq, "Tempo de atendimento: %d \n", g->ocupado);
@@ -110,9 +110,9 @@ void trataGuiche(guiche *g, fila *f, int t)
     }
     else
     {
-        /* No início, quando a fila tem apenas um cliente, o mesmo é atendido imediatamente
-        Como consequência a fila fica vazia e este trecho de código garante que a contagem do tempo
-        atendimento continue e que, quando o próximo cliente chegar na fila vazia,
+        /* No início, quando a fila tem um único cliente, o mesmo é atendido imediatamente.
+        Como consequência, a fila fica vazia e este trecho de código (else) garante que a contagem do tempo
+        de atendimento continue e que, quando o próximo cliente chegar na fila vazia,
         ele também seja atendido imediatamente. */
         if (g->ocupado != 0 && contaTempoAtendimento < g->ocupado)
             contaTempoAtendimento++;

@@ -11,7 +11,7 @@ int main()
 {
     srand(time(NULL));
     int tempo, sorteiaTempoChegada, sorteiaTempoAtendimento;
-    char nomeiaArquivo[10];
+    char *nomeiaArquivo;
     fila *f1;
     guiche *g1;
 
@@ -25,21 +25,28 @@ int main()
     // Parâmetro para sortear o tempo de atendimento de clientes.
     do
     {
-        printf("Parâmetro para o tempo de atendimento (valor de 0 a 10): ");
+        printf("Parâmetro para o tempo de atendimento (valor de 5 a 10): ");
         scanf("%d", &sorteiaTempoAtendimento);
-    } while (sorteiaTempoAtendimento < 0 || sorteiaTempoAtendimento > 10);
+    } while (sorteiaTempoAtendimento < 5 || sorteiaTempoAtendimento > 10);
 
-    // faz o loop até que se tenh zero ocorrência de fila cheia em um guichê
+    // Faz um loop até que se tenha zero ocorrência de fila cheia em algum guichê.
     int i = 1;
     do
     {
-        sprintf(nomeiaArquivo, "fila%d.txt", i); // Formata o nome do arquivo de arcordo com o loop.
+        if (i < 9)
+            nomeiaArquivo = malloc(10 * sizeof(char));
+        else if (i >= 10 && i <= 99)
+            nomeiaArquivo = malloc(11 * sizeof(char));
+
+        sprintf(nomeiaArquivo, "fila%d.txt", i); // Formata o nome do arquivo de arcordo com o loop (variável i).
         arq = fopen(nomeiaArquivo, "w");         // Abre o arquivo para escrever os dados.
 
-        // Escreve os parâmetros determinados pelo usuário
+        free(nomeiaArquivo); // Libera memória alocada para nomeiaArquivo.
+
+        // Escreve no arquivo os parâmetros determinados pelo usuário.
         fprintf(arq, "Parâmetros para sorteio. Tempo de chegada: %d; Tempo de atendimento: %d\n\n", sorteiaTempoChegada, sorteiaTempoAtendimento);
 
-        // Estabelece condições iniciais para cada iteração do loop.
+        // Estabelece, para cada iteração do loop, as condições iniciais.
         tempo = 0;
         initFila(&f1);
         initGuiche(&g1);
@@ -65,13 +72,13 @@ int main()
         // Escreve no final do arquivo imprimindo o número de ocorrências de fila cheia.
         fprintf(arq, "Ocorrências de fila cheia: %d\n", contaFilaCheia);
 
-        fclose(arq);      // Fecha o arquivo.
+        fclose(arq);       // Fecha o arquivo.
         liberaFila(&f1);   // libera fila.
         liberaGuiche(&g1); // libera guichê;
 
         i++;
 
-    } while (contaFilaCheia != 0 /* && i <= 9*/);
+    } while (contaFilaCheia != 0 && i <= 99);
 
     return 0;
 }

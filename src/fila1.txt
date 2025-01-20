@@ -1,4 +1,4 @@
-Parâmetros. Tempo de chagada: 2; Tempo de atendimento: 6
+Parâmetros para sorteio. Tempo de chegada: 3; Tempo de atendimento: 3
 
 ===> Tempo 0
 
@@ -12,9 +12,6 @@ Parâmetros. Tempo de chagada: 2; Tempo de atendimento: 6
 
 ===> Tempo 5
 
-Chegou cliente 1
-Próximo, senha 1 
-Tempo de atendimento: 9 
 ===> Tempo 6
 
 ===> Tempo 7
@@ -27,46 +24,50 @@ Tempo de atendimento: 9
 
 ===> Tempo 11
 
+Chegou cliente 1
+Próximo, senha 1 
+Tempo de atendimento: 6 
 ===> Tempo 12
 
-Chegou cliente 2
 ===> Tempo 13
 
 ===> Tempo 14
 
 ===> Tempo 15
 
-Próximo, senha 2 
-Tempo de atendimento: 11 
 ===> Tempo 16
 
 ===> Tempo 17
 
-Chegou cliente 3
 ===> Tempo 18
 
 ===> Tempo 19
 
+Chegou cliente 2
+Próximo, senha 2 
+Tempo de atendimento: 2 
 ===> Tempo 20
 
+Chegou cliente 3
 ===> Tempo 21
 
 ===> Tempo 22
 
+Próximo, senha 3 
+Tempo de atendimento: 3 
 ===> Tempo 23
 
-Chegou cliente 4
 ===> Tempo 24
 
 ===> Tempo 25
 
 ===> Tempo 26
 
+Chegou cliente 4
+Próximo, senha 4 
+Tempo de atendimento: 2 
 ===> Tempo 27
 
-Chegou cliente 5
-Próximo, senha 3 
-Tempo de atendimento: 11 
 ===> Tempo 28
 
 ===> Tempo 29
@@ -77,10 +78,11 @@ Tempo de atendimento: 11
 
 ===> Tempo 32
 
-Chegou cliente 6
+Chegou cliente 5
+Próximo, senha 5 
+Tempo de atendimento: 2 
 ===> Tempo 33
 
-Chegou cliente 7
 ===> Tempo 34
 
 ===> Tempo 35
@@ -93,149 +95,159 @@ Chegou cliente 7
 
 ===> Tempo 39
 
-Próximo, senha 4 
-Tempo de atendimento: 3 
 ===> Tempo 40
 
 ===> Tempo 41
 
-Chegou cliente 8
+Chegou cliente 6
+Próximo, senha 6 
+Tempo de atendimento: 5 
 ===> Tempo 42
 
 ===> Tempo 43
 
-Chegou cliente 9
-Próximo, senha 5 
-Tempo de atendimento: 2 
+Chegou cliente 7
 ===> Tempo 44
 
 ===> Tempo 45
 
 ===> Tempo 46
 
-Próximo, senha 6 
-Tempo de atendimento: 8 
+Chegou cliente 8
 ===> Tempo 47
 
-Chegou cliente 10
+Próximo, senha 7 
+Tempo de atendimento: 5 
 ===> Tempo 48
 
 ===> Tempo 49
 
 ===> Tempo 50
 
-Chegou cliente 11
+Chegou cliente 9
 ===> Tempo 51
 
 ===> Tempo 52
 
-Chegou cliente 12
 ===> Tempo 53
 
-Chegou cliente 13
+Chegou cliente 10
+Próximo, senha 8 
+Tempo de atendimento: 2 
 ===> Tempo 54
 
 ===> Tempo 55
 
-Chegou cliente 14
-Próximo, senha 7 
-Tempo de atendimento: 10 
+Chegou cliente 11
 ===> Tempo 56
 
+Próximo, senha 9 
+Tempo de atendimento: 4 
 ===> Tempo 57
 
-Chegou cliente 15
+Chegou cliente 12
 ===> Tempo 58
 
 ===> Tempo 59
 
 ===> Tempo 60
 
-Chegou cliente 16
 ===> Tempo 61
 
+Próximo, senha 10 
+Tempo de atendimento: 3 
 ===> Tempo 62
 
 ===> Tempo 63
 
+Chegou cliente 13
 ===> Tempo 64
 
-Chegou cliente 17
 ===> Tempo 65
 
+Chegou cliente 14
+Próximo, senha 11 
+Tempo de atendimento: 6 
 ===> Tempo 66
 
-Próximo, senha 8 
-Tempo de atendimento: 5 
+Chegou cliente 15
 ===> Tempo 67
 
 ===> Tempo 68
 
-Chegou cliente 18
+Chegou cliente 16
 ===> Tempo 69
 
+Chegou cliente 17
 ===> Tempo 70
 
+Chegou cliente 18
 ===> Tempo 71
 
-Fila cheia 
 ===> Tempo 72
 
-Próximo, senha 9 
-Tempo de atendimento: 7 
+Próximo, senha 12 
+Tempo de atendimento: 5 
 ===> Tempo 73
 
+Chegou cliente 19
 ===> Tempo 74
 
+Chegou cliente 20
 ===> Tempo 75
 
+Chegou cliente 21
 ===> Tempo 76
 
-Chegou cliente 19
 ===> Tempo 77
 
+Chegou cliente 22
 ===> Tempo 78
 
+Fila cheia 
+Próximo, senha 13 
+Tempo de atendimento: 7 
 ===> Tempo 79
 
+Chegou cliente 23
 ===> Tempo 80
 
-Próximo, senha 10 
-Tempo de atendimento: 10 
 ===> Tempo 81
 
 ===> Tempo 82
 
 ===> Tempo 83
 
+Fila cheia 
 ===> Tempo 84
 
+Fila cheia 
 ===> Tempo 85
 
 ===> Tempo 86
 
+Próximo, senha 14 
+Tempo de atendimento: 6 
 ===> Tempo 87
 
-Chegou cliente 20
 ===> Tempo 88
 
-Fila cheia 
 ===> Tempo 89
 
+Chegou cliente 24
 ===> Tempo 90
 
 ===> Tempo 91
 
-Próximo, senha 11 
-Tempo de atendimento: 9 
 ===> Tempo 92
 
-Chegou cliente 21
 ===> Tempo 93
 
+Próximo, senha 15 
+Tempo de atendimento: 7 
 ===> Tempo 94
 
-Fila cheia 
+Chegou cliente 25
 ===> Tempo 95
 
 ===> Tempo 96
@@ -248,5 +260,5 @@ Fila cheia
 
 ===> Tempo 100
 
-Número de atendimentos: 11
+Número de atendimentos: 15
 Ocorrências de fila cheia: 3
